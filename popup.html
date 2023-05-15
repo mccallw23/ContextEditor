@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mind Reader</title>
+        <style>
+            body {
+                width: 300px;
+                height: 300px;
+                padding: 10px;
+                font-family: Arial, sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Mind Reader</h1>
+        <p>This extension logs your interactions and attempts to infer your intentions.</p>
+        <p>For more details on how this works, visit our <a href="https://github.com/mccallw23/ContextEditor" target="_blank">GitHub page</a>.</p>
+        <button id="readMindButton">Read My Mind</button>
+
+        <script>
+            document.getElementById('readMindButton').addEventListener('click', function() {
+                chrome.runtime.sendMessage({type: 'read_my_mind'});
+            });
+        </script>
+    </body>
+</html>
